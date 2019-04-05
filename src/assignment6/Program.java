@@ -30,19 +30,13 @@ public class Program {
    * @return x^y mod m
    */
   public static int fastModExp(int x, int y, int m) {
+    if (y == 1) {
+      return x % m;
+    }
     if (y % 2 == 0) {
-      int temp = (x * x) % m;
-      for (int i = 0; i < y / 2; i++) {
-        temp *= temp;
-      } // for
-      return temp % m;
+      return fastModExp((x * x) % m, y / 2, m);
     } else {
-      int temp = x;
-      for (int j = 0; j < y - 1; j++) {
-        temp *= temp;
-      } // for
-      temp = temp % m;
-      return (x * temp) % m;
+      return x * fastModExp(x, y - 1, m);
     } // else
   }// fastModExp
 

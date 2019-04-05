@@ -9,5 +9,8 @@ public class Expt {
     int arr2[] = {3, 4, 5};
 
     System.out.println(Arrays.toString(Program.interleave(arr1, arr2)));
-  }
+    
+    System.out.println(Program.fastModExp(2, 4, 10));
+    
+  }//main
 }
