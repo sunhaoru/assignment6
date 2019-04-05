@@ -1,1 +1,103 @@
+Problem 1
 
+Operations to count
+array access                    -- dubs[i]
+substraction                    -- -
+take the absolute value         -- abs()
+comparison                      -- <
+
+Input of the model
+the size of the dubs array length, n.
+
+The worst-case scenario for this method is that the requested element k is
+either the last element in the array or is not in the array at all. The
+for-loop runs n times, resulting in the model: T(n) = 4n.
+
+For Big-O notation, the c is 4, and x_0 = 0. Since for the worst-case, T(n)
+= 4n, after starting input x_0, the following inequality holds:|T(n)| <=
+4*|O(n)|. The upper bound is solid because the 4n = 4n.
+
+
+Problem 2
+
+Operations to count
+mod                             -- %
+multiplication                  -- *
+division                        -- /
+condition check
+
+Input of the model
+n, the value of y
+
+Time complexity model of method would be following
+T(0) = 1 (base case)
+T(n) = 3 + T(n/2) = 3 + 3 + T(n/4)
+Thus, model is a logarithmic function.
+
+For Big-O notation, the c is 4, and x_0 = 2. After starting input x_0, the
+following inequality holds:|T(n)| <= 4*|O(log^2 n)|. When n is bigger than
+2, 4*log^2 n is always bigger than 3*log^2 n.
+
+
+Problem 3
+Operations to count
+array access                    -- val[i + j], arr[i], arr[j]
+IntPair                         -- IntPair()
+increment                       -- i++, j++
+condition check
+
+Input of the model
+the size of the array length, n.
+
+Model T of the time complexity
+T(n) = 6(n^2) + n + 1
+
+For Big-O notation, c = 7, and x_0 = 1. Notice that, when n > 1, the
+following inequality holds:|T(n)| <= 7*|O(n^2)|.
+
+
+Problem 4
+Operations to count
+array access                    -- arr[i]
+string append                   -- val.append()
+increment                       -- i++, j++
+condition check
+
+Input of the model
+the size of the array length, n.
+the constand, q.
+
+Model T of the time comlexity
+T(n) = 3 * q * n + n + 1
+
+A tight upper bound could be linear n. Since T(n) is a linear function, we
+can fix a c and a x_0 such that after starting point x_0, the
+following inequality holds:|T(n)| <=c*|O(n)|.
+
+My runtime would change to that T(n) = (2 + string.length) * q * n + n + 1.
+
+
+Problem 5
+Operations to count
+array access 
+increment                       
+condition check
+addition
+divid
+
+Input of the model
+the size of the array length, m and n.
+
+Model T of the time comlexity
+T(m,n) = 3m + 3n + 2
+
+A tight upper bound could be linear m + n. Since T(n) is a linear function, we
+can fix a c and a x_0 such that after starting point x_0, the
+following inequality holds:|T(m,n)| <=c*|O(m + n)|.
+
+A tight upper bound characterization of the method's space complexity is
+that |T(m,n)| <=c*|O(m + n)| because the method creates a new array that
+has m + n length.
+
+If we know the space complexity of a function, we can infer the a bound on
+its time complexity.
